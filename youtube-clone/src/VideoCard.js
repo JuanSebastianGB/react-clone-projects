@@ -7,9 +7,11 @@ export const VideoCard = ({ image, title, channel, views, timestamp, channelImag
     <div className='videoCard'>
       <img className='VideoCard__thumbnail' src={image} alt='' />
       <div className='videoCard__info'>
-        <Avatar className='videoCard__avatar'
+        <Avatar
+          className='videoCard__avatar'
           alt={channel}
-          src={channelImage} />
+          src={channelImage}
+        />
         <div className='videoCard__text'>
           <h4>{title}</h4>
           <p>{channel}</p>
