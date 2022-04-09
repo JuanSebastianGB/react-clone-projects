@@ -1,5 +1,5 @@
 import React from 'react';
-import './VideoRow.css'
+import './VideoRow.css';
 
 export const VideoRow = ({
   views,
@@ -12,12 +12,16 @@ export const VideoRow = ({
 }) => {
   return (
     <div className='videoRow'>
-      <img src={image} alt="" />
-      <div className="videRow__text">
+      <img src={image} alt='' />
+      <div className='videoRow__text'>
         <h3>{title}</h3>
-        <p>
-          {channel} . {subs} subscribers {views} . {timestamp}
+        <p className='videoRow__headline'>
+          {channel} .
+          <span className='videoRow__subs'>
+            <span className='videoRow__subsNumber'>{subs} subscribers</span>
+          </span>   {views} . {timestamp}
         </p>
+        <p className='videoRow__description'>{description}</p>
       </div>
     </div>
   );
